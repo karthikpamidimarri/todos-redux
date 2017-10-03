@@ -14,7 +14,8 @@ const store = createStore(
 );
 
 store.subscribe(() => {
-  saveState(store.getState());
+  saveState(
+      { todos: store.getState().todos });
 });
 
 render(
